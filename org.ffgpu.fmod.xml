@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    DBus interface of ffgpu-fmod to be called by ffgpu-qemu
+-->
+<node name="/org/ffgpu/fmod">
+  <interface name="org.ffgpu.fmod">
+
+    <!--
+	Host to read/write device's memory
+    -->
+    <method name="read-device-memory">
+      <arg name="address" direction="in" type="t" />
+      <arg name="size" direction="in" type="t" />
+      <arg name="data" direction="out" type="ay" >
+	<annotation name="org.gtk.GDBus.C.ForceVariant" value="true" />
+      </arg>
+    </method>
+    <method name="write-device-memory">
+      <arg name="address" direction="in" type="t" />
+      <arg name="size" direction="in" type="t" />
+      <arg name="data" direction="in" type="ay" >
+	<annotation name="org.gtk.GDBus.C.ForceVariant" value="true" />
+      </arg>
+    </method>
+
+    <!--
+	Host to read/write device's register
+    -->
+    <method name="read-device-reg32">
+      <arg name="address" direction="in" type="u" />
+      <arg name="data" direction="out" type="u" />
+    </method>
+
+    <method name="write-device-reg32">
+      <arg name="address" direction="in" type="u" />
+      <arg name="data" direction="in" type="u" />
+    </method>
+
+  </interface>
+</node>
