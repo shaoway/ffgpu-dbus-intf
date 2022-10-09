@@ -8,7 +8,7 @@
     <!--
 	For device to read host's physical memory
     -->
-    <method name="read-host-memory">
+    <method name="ReadHostMemory">
       <arg name="address" direction="in" type="t" />
       <arg name="size" direction="in" type="t" />
       <arg name="data" direction="out" type="ay" >
@@ -19,7 +19,7 @@
     <!--
 	For device to write host's physical memory
     -->
-    <method name="write-host-memory">
+    <method name="WriteHostMemory">
       <arg name="address" direction="in" type="t" />
       <arg name="size" direction="in" type="t" />
       <arg name="data" direction="in" type="ay" >
@@ -30,7 +30,7 @@
     <!--
 	For device to assert a interrupt to host
     -->
-    <method name="assert-interrupt">
+    <method name="AssertInterrupt">
       <arg name="vector" direction="in" type="i" />
     </method>
 

@@ -8,14 +8,14 @@
     <!--
 	Host to read/write device's memory
     -->
-    <method name="read-device-memory">
+    <method name="ReadDeviceMemory">
       <arg name="address" direction="in" type="t" />
       <arg name="size" direction="in" type="t" />
       <arg name="data" direction="out" type="ay" >
 	<annotation name="org.gtk.GDBus.C.ForceVariant" value="true" />
       </arg>
     </method>
-    <method name="write-device-memory">
+    <method name="WriteDeviceMemory">
       <arg name="address" direction="in" type="t" />
       <arg name="size" direction="in" type="t" />
       <arg name="data" direction="in" type="ay" >
@@ -26,12 +26,12 @@
     <!--
 	Host to read/write device's register
     -->
-    <method name="read-device-reg32">
+    <method name="ReadDeviceReg32">
       <arg name="address" direction="in" type="u" />
       <arg name="data" direction="out" type="u" />
     </method>
 
-    <method name="write-device-reg32">
+    <method name="WriteDeviceReg32">
       <arg name="address" direction="in" type="u" />
       <arg name="data" direction="in" type="u" />
     </method>
