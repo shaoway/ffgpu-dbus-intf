@@ -12,7 +12,7 @@
       <arg name="address" direction="in" type="t" />
       <arg name="size" direction="in" type="t" />
       <arg name="data" direction="out" type="ay" >
-	<annotation name="org.gtk.GDBus.C.ForceVariant" value="true" />
+	<annotation name="org.gtk.GDBus.C.ForceGVariant" value="true" />
       </arg>
     </method>
 
@@ -23,7 +23,7 @@
       <arg name="address" direction="in" type="t" />
       <arg name="size" direction="in" type="t" />
       <arg name="data" direction="in" type="ay" >
-	<annotation name="org.gtk.GDBus.C.ForceVariant" value="true" />
+	<annotation name="org.gtk.GDBus.C.ForceGVariant" value="true" />
       </arg>
     </method>
 
